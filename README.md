@@ -6,3 +6,5 @@ Group Name: TEAM_NAME
 Team Members: STUDENTS_NETIDS
 
 Project Manager: welby2, yse2
+
+Project Description:
