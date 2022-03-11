@@ -6,5 +6,6 @@
     "assetBundlePatterns": [
       "**/*"
     ]
-  }
+  },
+  "plugins": ["@react-native-mapbox-gl/maps"]
 }
