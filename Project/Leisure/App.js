@@ -2,20 +2,11 @@ import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import MapView from 'react-native-maps';
-
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen!</Text>
-      <MapView
-      initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-      }}/>
     </View>
   );
 }
