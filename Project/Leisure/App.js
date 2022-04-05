@@ -2,12 +2,11 @@ import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import Home from './screens/Home'
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen!</Text>
-    </View>
+    <Home></Home>
   );
 }
 
@@ -15,6 +14,7 @@ function AccountScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Account Screen!</Text>
+      // All React Components go here (Buttons for Name, etc + Image)
     </View>
   );
 }
@@ -23,6 +23,7 @@ function HistoryScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>History Screen!</Text>
+      // Don't implement yet
     </View>
   );
 }
@@ -31,6 +32,7 @@ function PreferencesScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Preferences Screen!</Text>
+      // All React Components go here (DropDown Picker)
     </View>
   );
 }
