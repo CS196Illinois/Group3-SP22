@@ -3,6 +3,7 @@ import { Button, Text, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home'
+import Preferences1 from './screens/Preferences'
 
 function HomeScreen({ navigation }) {
   return (
@@ -30,11 +31,7 @@ function HistoryScreen({ navigation }) {
 
 function PreferencesScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Preferences Screen!</Text>
-      // All React Components go here (DropDown Picker)
-      </View>
-      //TBD
+      <Preferences1></Preferences1>
   );
 }
 
