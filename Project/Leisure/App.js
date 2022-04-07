@@ -33,7 +33,8 @@ function PreferencesScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Preferences Screen!</Text>
       // All React Components go here (DropDown Picker)
-    </View>
+      </View>
+      //TBD
   );
 }
 
