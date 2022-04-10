@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import DropDownPicker from 'react-native-dropdown-picker';
 import Home from './screens/Home'
 import Preferences from './screens/Preferences'
 
@@ -31,7 +32,7 @@ function HistoryScreen({ navigation }) {
 
 function PreferencesScreen({ navigation }) {
   return (
-      <Preferences></Preferences>
+    <Preferences></Preferences>
   );
 }
 
