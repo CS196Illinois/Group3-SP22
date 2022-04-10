@@ -1,6 +1,6 @@
 import React from "react";
 
-class Preferences1 extends React.Component {
+class Preferences extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -38,11 +38,4 @@ class Preferences1 extends React.Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    center: {
-        alignItems: ''
-    }
-})
-
-export default Preferences1
+export default Preferences
