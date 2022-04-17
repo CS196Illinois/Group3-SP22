@@ -67,6 +67,9 @@ function Preferences () {
 
     return (
         <>
+        <span>
+            <Text style={emptyStlyes.text}>Clear</Text>
+        </span>
         <DropDownPicker
         //radius
             zIndex={4000}
@@ -87,6 +90,8 @@ function Preferences () {
             setItems={setRadius}
         />
         <span>
+            <Text style={emptyStlyes.text}>Clear</Text>
+            <Text style={emptyStlyes.text}>Clear</Text>
             <Text style={emptyStlyes.text}>Clear</Text>
         </span>
         <DropDownPicker
@@ -109,6 +114,11 @@ function Preferences () {
             setValue={setMValue}
             setItems={setMoney}
         />
+        <span>
+            <Text style={emptyStlyes.text}>Clear</Text>
+            <Text style={emptyStlyes.text}>Clear</Text>
+            <Text style={emptyStlyes.text}>Clear</Text>
+        </span>
         <DropDownPicker
         //time
             zIndex={2000}
@@ -129,6 +139,11 @@ function Preferences () {
             setValue={setTValue}
             setItems={setTime}
         />
+        <span>
+            <Text style={emptyStlyes.text}>Clear</Text>
+            <Text style={emptyStlyes.text}>Clear</Text>
+            <Text style={emptyStlyes.text}>Clear</Text>
+        </span>
         <DropDownPicker
         //people
             zIndex={1000}
@@ -154,9 +169,9 @@ function Preferences () {
 }
 
 const emptyStlyes = StyleSheet.create({
-    text: {
-        color: 'white'
-    }
+        text: {
+           color: "#F2F2F2"
+        }
 })
 
 const styles = StyleSheet.create({
