@@ -1,20 +1,55 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useEffect} from 'react';
 import { Text, StyleSheet, Dimensions } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 
+const storeData = async (key,value) => {
+    try {
+        await AsyncStorage.setItem(key,value);
+    } catch(e){
+        throw e.message;
+    }
+}
+
+const getData = async (key) => {
+    try {
+        const value = await AsyncStorage.getItem(key);
+        return value;
+    } catch(e) {
+        throw e.message;
+    }
+}
 
 function Preferences () {
+
     const [rOpen, setROpen] = useState(false);
     const [mOpen, setMOpen] = useState(false);
     const [tOpen, setTOpen] = useState(false);
     const [pOpen, setPOpen] = useState(false);
     const [rValue, setRValue] = useState(null);
-    const [mValue, setMValue] = useState(null);
-    const [tValue, setTValue] = useState(null);
-    const [pValue, setPValue] = useState(null);
+    const [mValue, setMValue] = useState(getData("M_VALUE"));
+    const [tValue, setTValue] = useState(getData("T_VALUE"));
+    const [pValue, setPValue] = useState(getData("P_VALUE"));
+
+    useEffect(() => {
+        storeData("R_VALUE", rValue);
+    }, [rValue]);
+
+    useEffect(() => {
+        storeData("M_VALUE", mValue);
+    }, [mValue]);
+
+    useEffect(() => {
+        storeData("T_VALUE", tValue);
+    }, [tValue]);
+
+    useEffect(() => {
+        storeData("P_VALUE", pValue);
+    }, [pValue]);
+
     const onRadiusOpen = useCallback(() => {
         setMOpen(false);
         setTOpen(false);
