@@ -6,6 +6,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Home from './screens/Home'
 import Preferences from './screens/Preferences'
 import Places from './screens/Places'
+import Map from './screens/Map'
 
 function HomeScreen({ navigation }) {
   return (
@@ -25,6 +26,12 @@ function AccountScreen({ navigation }) {
 function PlacesAPI({ navigation }) {
   return (
     <Places></Places>
+  )
+}
+
+function MapScreen({ navigation }) {
+  return (
+    <Map></Map>
   )
 }
 
@@ -54,6 +61,7 @@ export default function App() {
         <Drawer.Screen name="Account" component={AccountScreen} />
         <Drawer.Screen name="History" component={HistoryScreen} />
         <Drawer.Screen name="Places" component={PlacesAPI} />
+        <Drawer.Screen name="Map" component={MapScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
